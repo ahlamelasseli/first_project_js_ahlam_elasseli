@@ -29,4 +29,12 @@ if (x == 1) {
     } else {
         console.log(" too short❌")
     }
+    let email = prompt("enter ur email").trim().toLowerCase()
+    if (email.length <= 10 || email.includes("@")) {
+        alert("email dyalk madazch ")
+    } else {
+        Users.email = email
+
+    }
+
 }
