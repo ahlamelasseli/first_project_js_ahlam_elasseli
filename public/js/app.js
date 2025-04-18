@@ -37,4 +37,8 @@ if (x == 1) {
 
     }
 
+    let age = prompt("enter ur age").trim()
+    if (age.length < 3 || age.length == 0) {
+        alert("try again!")
+    }
 }
