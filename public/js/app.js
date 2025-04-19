@@ -33,12 +33,12 @@ if (x == 1) {
     if (email.length <= 10 || email.includes("@")) {
         alert("ur email r confermed")
     } else {
-        Users.email = email
+        Users.email = user
 
     }
 
     let age = prompt("enter ur age").trim()
-    if (age.length >= 2 || age.length <= 0) {
+    if (age.length >= 3 || age.length <= 0) {
         alert("try again!")
     }
     let password = prompt("enter ur password : should be strong & without spaces")
@@ -55,5 +55,18 @@ if (x == 1) {
         
     }
 }else if (x == 2) {
+        let email = prompt("Enter your email:").trim().toLowerCase();
 
-}
+        if (!user.every(e => e.email === email)) {
+                alert("This email does not exist, you need to sign up!");
+        }
+    
+        let passWord = prompt("Enter your password to log in:").trim();
+    
+        while (!user.every(e => e.email === email && e.password === passWord)) {
+            alert("Your password is incorrect, try again:");
+            passWord = prompt("Enter your password to log in:").trim();
+           }
+        alert("you logged successfully ");
+    }
+
