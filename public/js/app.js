@@ -55,18 +55,32 @@ if (x == 1) {
         
     }
 }else if (x == 2) {
-        let email = prompt("Enter your email:").trim().toLowerCase();
+    let email = prompt("Enter your email:").trim().toLowerCase();
 
-        if (!user.every(e => e.email === email)) {
-                alert("This email does not exist, you need to sign up!");
-        }
-    
-        let passWord = prompt("Enter your password to log in:").trim();
-    
-        while (!user.every(e => e.email === email && e.password === passWord)) {
-            alert("Your password is incorrect, try again:");
-            passWord = prompt("Enter your password to log in:").trim();
-           }
-        alert("you logged successfully ");
+    if (!user.find(e => e.email === email)) {
+            alert("This email does not exist, you need to sign up!");
     }
 
+    let passWord = prompt("Enter your password to log in:").trim();
+
+    while (!user.fin(e => e.email === email && e.password === passWord)) {
+        alert('That password didn’t match')
+        passWord = prompt("Enter your password to log in:").trim();
+       }
+    alert("you logged successfully ");
+}
+
+const i = (e) =>{
+
+    while (true) {
+        let l = prompt("\n 1.logout,\n 2.withdraw money, \n 3.deposit money,\n 4.take a loan, \n 5.invest)").toLowerCase();
+        if (l == 1) {
+            alert("You are logged out.");
+            return;
+        } else if (l == 2) {
+        
+        }else if (l == 3) {
+            
+        }
+}
+}
